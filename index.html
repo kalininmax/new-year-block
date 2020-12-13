@@ -22,46 +22,50 @@
     </ul>
     <p class="special-offer__text">Позаботьтесь о покупках заранее!</p>
     <p class="special-offer__order special-offer__text">
-    <a class="special-offer__button" href="#">Заказать</a>
+    <a class="special-offer__button button" href="#">Заказать</a>
       До Нового года осталось</p>
     <script src="//megatimer.ru/get/9e3837c23f340a6b966b639b947233cb.js"></script>
   </section>
-
-  <section class="page__modal">
+  <div class="overlay-modal"></div>
+  <section class="page__modal order-modal">
     <h2 class="modal__title">Заказать трубогиб гиббон <span>с выгодой 50%</span> за 6 490 руб.</h2>
-    <form class="order-form" action="#" method="post">
+    <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
       <img class="order-form__image" src="img/gibbon.png" alt="Трубогиб Гиббон синего цвета">
-      <ul class="order-form__list">
-        <li class="order-form__item form-select">
-          <select class="form-select__select" name="model" id="model">
-            <option class="form-select__option" value="gibbon">Трубогиб Гиббон</option>
-            <option class="form-select__option" value="gibbon-pro">Трубогиб Гиббон Про</option>
-          </select>
-        </li>
-        <li class="order-form__item input-text">
-          <input class="input-text__input" type="text" name="name" id="name" placeholder="Ваше имя">
-          <label class="input-text__label" for="name">Ваше имя</label>
-        </li>
-        <li class="order-form__item input-text">
-          <input class="input-text__input" type="tel" name="phone" id="phone" placeholder="Ваш телефон">
-          <label class="input-text__label" for="phone">Ваш телефон</label>
-        </li>
-        <li class="order-form__item form-checkbox">
-          <input class="form-checkbox__input" type="checkbox" name="centroboy" id="centroboy">
-          <label class="form-checkbox__label" for=""></label>
-        </li>
-        <li class="order-form__item form-checkbox">
-          <input class="form-checkbox__input" type="checkbox" name="adapter" id="adapter">
-          <label class="form-checkbox__label" for=""></label>
-        </li>
-        <li class="order-form__item form-checkbox">
-          <input class="form-checkbox__input" type="checkbox" name="ugol" id="ugol">
-          <label class="form-checkbox__label" for=""></label>
-        </li>
-      </ul>
-      <button class="order-form__submit" type="submit">Заказать</button>
-      <p class="order-form__text">Мы свяжемся с Вами в течение 5 минут и уточним детали доставки</p>
+      <div class="order-form__wrapper">
+        <ul class="order-form__list">
+          <li class="order-form__item form-select">
+            <select class="form-select__select" name="model" id="model">
+              <option class="form-select__option" value="gibbon">Трубогиб Гиббон</option>
+              <option class="form-select__option" value="gibbon-pro">Трубогиб Гиббон Про</option>
+            </select>
+          </li>
+          <li class="order-form__item input-text">
+            <input class="input-text__input" type="text" name="name" id="name" placeholder="Имя Фамилия" required>
+            <label class="visually-hidden" for="name">Ваше имя</label>
+          </li>
+          <li class="order-form__item input-text">
+            <input class="input-text__input" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ" pattern="[+7]{2} [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" required>
+            <label class="visually-hidden" for="phone">Ваш телефон</label>
+          </li>
+          <li class="order-form__item form-checkbox">
+            <input class="form-checkbox__input" type="checkbox" name="centroboy" id="centroboy">
+            <label class="form-checkbox__label" for="centroboy">+ центробой</label>
+          </li>
+          <li class="order-form__item form-checkbox">
+            <input class="form-checkbox__input" type="checkbox" name="adapter" id="adapter">
+            <label class="form-checkbox__label" for="adapter">+ адаптер для дрели</label>
+          </li>
+          <li class="order-form__item form-checkbox">
+            <input class="form-checkbox__input" type="checkbox" name="ugol" id="ugol">
+            <label class="form-checkbox__label" for="ugol">+ магнитный угол для сварки</label>
+          </li>
+        </ul>
+        <button class="order-form__submit button" type="submit">Заказать</button>
+        <p class="order-form__text">Мы свяжемся с Вами в течение 5 минут и уточним детали доставки</p>
+      </div>
     </form>
+    <button class="order-modal__close"><span class="visually-hidden">Закрыть</span></button>
   </section>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
